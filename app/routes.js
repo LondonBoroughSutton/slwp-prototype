@@ -7,19 +7,16 @@ router.get('/', function (req, res) {
 })
 
 // add your routes here
-
 router.post('/fly-tip/', function (req, res) {
-   
-   var location = req.session.data['radio-group-location'];
-   
-   if (location == 'Veolia') {
-       res.redirect('/fly-tip/fly-tip-or-sweeper-bags');
-   }
-   else if (location == 'idVerde') {
-       res.redirect('/fly-tip/get-idVerde-info');
-   } else {
-       res.redirect('/fly-tip/signpost-elsewhere');
-   }
-});
+  var location = req.session.data['radio-group-location']
+
+  if (location === 'Veolia') {
+    res.redirect('/fly-tip/fly-tip-or-sweeper-bags')
+  } else if (location === 'idVerde') {
+    res.redirect('/fly-tip/get-idVerde-info')
+  } else {
+    res.redirect('/fly-tip/signpost-elsewhere')
+  }
+})
 
 module.exports = router
