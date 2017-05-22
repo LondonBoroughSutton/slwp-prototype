@@ -1,8 +1,8 @@
 {% extends "govuk_template.html" %}
 
 {% set global_header_text = 'London Borough of Sutton' %}
-
 {% set homepage_url = 'https://www.sutton.gov.uk' %}
+{% set crown_copyright_message = '' %}
 
 {% block head %}
   {% include "includes/head.html" %}
@@ -41,6 +41,16 @@
 {% endblock %}
 
 {% block footer_support_links %}
+  <img src="https://www.sutton.gov.uk/site/styles/css_img/logo-footer.png" class="logo" alt="Sutton Council logo">
+  <div class="footer-admin">
+  	<p>&copy; 2016 Sutton Council, Civic Offices, St. Nicholas Way, Sutton SM1 1EA | <a href="https://www.sutton.gov.uk/info/200232/contact_us" title="Contact us">Contact us</a></p>
+  	<p>
+  		<a href="https://www.sutton.gov.uk/privacy" title="Privacy statement">Privacy statement</a> | 
+      <a href="https://www.sutton.gov.uk/terms" title="Terms and disclaimer">Terms and disclaimer</a> | 
+      <a href="https://www.sutton.gov.uk/site_map" title="Site map">Site map</a>  | 
+  		<a href="https://www.sutton.gov.uk/accessibility" title="Accessibility">Accessibility</a>
+  	</p>
+  </div>
   {% if useAutoStoreData %}
     <ul>
       <li>
