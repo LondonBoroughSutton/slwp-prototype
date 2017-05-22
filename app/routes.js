@@ -13,7 +13,7 @@ router.post('/fly-tip/', function (req, res) {
    var location = req.session.data['radio-group-location'];
    
    if (location == 'Veolia') {
-       res.redirect('/fly-tip/Fly-tip-or-sweeper-bags');
+       res.redirect('/fly-tip/fly-tip-or-sweeper-bags');
    }
    else if (location == 'idVerde') {
        res.redirect('/fly-tip/get-idVerde-info');
