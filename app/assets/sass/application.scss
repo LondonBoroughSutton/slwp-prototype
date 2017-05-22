@@ -88,6 +88,9 @@ $toolkit-font-stack: $Helvetica-Regular;
   }
 }
 @media (min-width: 769px) {
+  body { 
+    padding-top: 2.8em;
+  }
   #global-header.with-proposition .header-wrapper .header-proposition {
     width: 33%;
   }
