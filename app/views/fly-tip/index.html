@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Question page
+  What best describes the location of the problem?
 {% endblock %}
 
 {% block content %}
@@ -10,25 +10,35 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="/url/of/previous/page">Back</a>
+      <a class="link-back" href="/">Back</a>
 
-      <h1 class="heading-large">Heading or question goes here
+      <h1 class="heading-large">Where is the problem?
       </h1>
 
       <form class="form" action="/fly-tip/" method="post">
+        
+ <div class="form-group">
+    <fieldset>
 
-        <p>[Insert question content here]</p>
-        
-        <div class="form-group">
-          <label class="form-label" for="road-name">
-            Road name  
-            <span class="form-hint">
-              Look for a street name plate.
-            </span>
-          </label>
-          <input class="form-control" id="road-name" type="text" name="road-name">
-        </div>
-        
+      <legend class="visually-hidden">What best describes the location of the problem?</legend>
+
+      <div class="multiple-choice">
+        <input id="radio-veolia" type="radio" name="radio-group-location" value="Veolia">
+        <label for="radio-veolia">On or near a public road, on the verge</label>
+      </div>
+      <div class="multiple-choice">
+        <input id="radio-idverde" type="radio" name="radio-group-location" value="idVerde">
+        <label for="radio-idverde">In a park</label>
+      </div>
+      <p class="form-block">or</p>
+      <div class="multiple-choice">
+        <input id="radio-other" type="radio" name="radio-group-location" value="other">
+        <label for="radio-other">Somewhere else</label>
+      </div>
+
+    </fieldset>
+  </div>
+
         <p>Road name: {{ data['road-name'] }}</p>
 
         <div class="form-group">
