@@ -29,3 +29,31 @@ $path: "/public/images/";
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+#global-header,
+#global-header .header-wrapper {
+  background: #dad6bc;
+}
+#global-header #logo,
+#global-header .header-proposition #proposition-name,
+#global-header .header-proposition #proposition-link a, #global-header .header-proposition #proposition-links a {
+  color: #009B67;
+}
+#global-header #logo {
+    background: url(https://www.sutton.gov.uk/site/styles/css_img/logo-sutton.png) no-repeat 0 40%;
+    padding-left: 73px;
+    min-height: 73px;
+    padding-top: 37px;
+}
+
+#global-header-bar {
+  display: none;
+}
+@media (min-width: 769px) {
+  #global-header.with-proposition .header-wrapper .header-proposition {
+    width: 40%;
+  }
+  #global-header.with-proposition .header-wrapper .header-global {
+   width: 60%; 
+  }
+}
