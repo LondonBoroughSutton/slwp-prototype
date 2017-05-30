@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <script>
+        document.write('<a class="link-back" href="' + document.referrer + '">Go Back</a>');
+      </script>
+
+      <a class="link-back" href="/dirty-location/get-location">Back</a>
+
+      <h1 class="heading-large">Tell us more so we can take the right action</h1>
+
+      <p>The following list is based on the Street Below Grade event on p38 of SLWP Deployment Project Specification v0.5</p>
+
+      <form class="form" action="/dirty-location/veolia-details" method="post">
+        
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend class="visually-hidden">What's this bit for?</legend>
+
+            <div class="multiple-choice">
+              <input id="radio-litter" type="radio" name="radio-group-category" value="litter">
+                <label for="radio-litter">General litter problem</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="radio-leaves" type="radio" name="radio-group-category" value="leaves">
+                <label for="radio-leaves">Leaves need clearing</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="radio-weeds" type="radio" name="radio-group-category" value="weeds">
+                <label for="radio-weeds">Overgrown with weeds</label>
+            </div>
+
+            <p class="form-block">or</p>
+
+            <div class="multiple-choice">
+              <input id="radio-sweeping" type="radio" name="radio-group-category" value="sweping">
+                <label for="radio-sweeping">The road needs sweeping</label>
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <div>
+          <textarea name="description" cols="60" rows="5">Tell us anything that will help</textarea>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/lbs-slwp-prototype/">Back</a>
+
+      <h1 class="heading-large">What is the problem you need us to sort out?</h1>
+ 
+      <p>We need to work out how to deal with your problem in the best way.<br>We need some info here about the standards that we're obliged to maintain.<br>Which of the following best describes the problem?</p>
+      
+      <form class="form" action="/dirty-location/" method="post">
+        
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend class="visually-hidden">What's this bit for?</legend>
+
+            <div class="multiple-choice">
+              <input id="radio-graffiti" type="radio" name="radio-group-problem" value="graffiti">
+                <label for="radio-graffiti">Graffiti</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="radio-fly-posting" type="radio" name="radio-group-problem" value="flyPosting">
+                <label for="radio-fly-posting">Illegal fly-posting</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="radio-fly-tip" type="radio" name="radio-group-problem" value="flyTip">
+                <label for="radio-fly-tip">Illegally dumped waste, including fly-tipping</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="radio-dead-animal" type="radio" name="radio-group-problem" value="deadAnimal">
+              <label for="radio-dead-animal">A dead animal or animals</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="radio-biohazard" type="radio" name="radio-group-problem" value="biohazard">
+              <label for="radio-biohazard">Contaminated human waste, such as drug syringes or used condoms</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="radio-dog-mess" type="radio" name="radio-group-problem" value="dogMess">
+              <label for="radio-dog-mess">A large amount of dog mess in a localised area</label>
+            </div>
+
+            <p class="form-block">or</p>
+
+            <div class="multiple-choice">
+              <input id="radio-general-mess" type="radio" name="radio-group-problem" value="generalMess">
+              <label for="radio-general-mess">General mess</label>
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

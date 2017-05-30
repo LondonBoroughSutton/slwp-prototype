@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/dirty-location/">Back</a>
+
+      <h1 class="heading-large">We need to work out how to handle the mess</h1>
+ 
+      <form class="form" action="/dirty-location/get-location" method="post">
+        
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend class="visually-hidden">Which of these best describes the location of the mess?</legend>
+
+            <div class="multiple-choice">
+              <input id="radio-veolia-location" type="radio" name="radio-group-dirty-location" value="Veolia">
+                <label for="radio-veolia-location">On or near a public road, on the verge</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="radio-idverde-location" type="radio" name="radio-group-dirty-location" value="idVerde">
+                <label for="radio-idverde-location">In a park</label>
+            </div>
+
+            <p class="form-block">or</p>
+
+            <div class="multiple-choice">
+              <input id="radio-other-location" type="radio" name="radio-group-dirty-location" value="notResponsible">
+                <label for="radio-other-location">Somewhere else</label>
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
