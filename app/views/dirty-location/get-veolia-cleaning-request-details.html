@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Question page
+  Tell us more so we can take the right action
 {% endblock %}
 
 {% block content %}
@@ -9,10 +9,6 @@
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
-
-      <script>
-        document.write('<a class="link-back" href="' + document.referrer + '">Go Back</a>');
-      </script>
 
       <a class="link-back" href="/dirty-location/get-location">Back</a>
 
@@ -26,7 +22,7 @@
 
           <fieldset>
 
-            <legend class="visually-hidden">What's this bit for?</legend>
+            <legend class="visually-hidden">Tell us more so we can take the right action</legend>
 
             <div class="multiple-choice">
               <input id="radio-litter" type="radio" name="radio-group-category" value="litter">
@@ -46,7 +42,7 @@
             <p class="form-block">or</p>
 
             <div class="multiple-choice">
-              <input id="radio-sweeping" type="radio" name="radio-group-category" value="sweping">
+              <input id="radio-sweeping" type="radio" name="radio-group-category" value="sweeping">
                 <label for="radio-sweeping">The road needs sweeping</label>
             </div>
 
@@ -54,8 +50,11 @@
 
         </div>
 
-        <div>
-          <textarea name="description" cols="60" rows="5">Tell us anything that will help</textarea>
+        <div class="form-group">
+          <label class="form-label" for="description">
+            Tell us anything else you think will help
+          </label>
+          <textarea class="form-control form-control-3-4" name="description" id="description" rows="5"></textarea>
         </div>
 
         <div class="form-group">

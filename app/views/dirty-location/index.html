@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Question page
+  Request cleaning of a dirty place
 {% endblock %}
 
 {% block content %}
@@ -10,11 +10,13 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="/lbs-slwp-prototype/">Back</a>
+      <a class="link-back" href="../">Back</a>
 
       <h1 class="heading-large">What is the problem you need us to sort out?</h1>
  
-      <p>We need to work out how to deal with your problem in the best way.<br>We need some info here about the standards that we're obliged to maintain.<br>Which of the following best describes the problem?</p>
+      <p>We need to work out how to deal with your problem in the best way.</p>
+      
+      <p>We need some info here about the standards that we're obliged to maintain.</p>
       
       <form class="form" action="/dirty-location/" method="post">
         
@@ -22,7 +24,7 @@
 
           <fieldset>
 
-            <legend class="visually-hidden">What's this bit for?</legend>
+            <legend class="visually-hidden">What is the problem you need us to sort out?</legend>
 
             <div class="multiple-choice">
               <input id="radio-graffiti" type="radio" name="radio-group-problem" value="graffiti">
